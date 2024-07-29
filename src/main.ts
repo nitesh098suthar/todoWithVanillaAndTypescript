@@ -26,6 +26,19 @@ const creatingElements = () => {
   oneTask.append(deleteButton)
 
   allTask.append(oneTask)
+
+  deleteButton.onclick = () => {
+    oneTask.remove()
+  }
+
+  checkBox.onclick = () => {
+   if(checkBox.checked){
+    oneTask.style.backgroundColor = "green"
+   }
+   else{
+    oneTask.style.backgroundColor = ""
+   } 
+  }
 }
 
 submitButton.addEventListener("click", ()=>{
